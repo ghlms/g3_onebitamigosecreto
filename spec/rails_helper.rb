@@ -1,10 +1,11 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
-ENV['RAILS_ENV'] ||= 'test'
 require 'spec_helper'
+ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
+abort("The Rails environment is running in production mode!") if Rails.env.production?
 # Prevent database truncation if the environment is production
 require 'rspec/rails'
-abort("The Rails environment is running in production mode!") if Rails.env.production?
+require 'rspec/core'
 
 # Add additional requires below this line. Rails is not loaded until this point!
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
