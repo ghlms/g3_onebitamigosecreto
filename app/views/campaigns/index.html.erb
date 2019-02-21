@@ -15,7 +15,7 @@
                   <p class="title"><%= truncate(c.title, length: 30, omission: '...') %></p>
                 </div>
                 <div class="col s4 m2 l2">
-                  <p class="data"><%= (c.created_at)? c.created_at.strftime("%d/%m/%y") : '' %></p>
+                  <p class="data"><%= (c.date)? c.date.strftime("%d/%m/%y") : '' %></p>
                 </div>
               </div>
               <div class="row">
